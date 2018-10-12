@@ -16,14 +16,12 @@
   <view class="weui-cell__bd">
       <input class="weui-input" placeholder="请输入密码"/>
   </view>
+</view> 
+
+<view class="section section_gap">
+  <view class="remember-pwd">记住密码</view>
+  <switch name="rememberpwd"/>
 </view>
-
-  
-
-  <view class="section section_gap">
-    <view class="remember-pwd">记住密码</view>
-    <switch name="rememberpwd"/>
-  </view>
   
   <view class="btn-area">
     <button formType="submit" bindtap='loginTap'>登录</button>  
