@@ -1,0 +1,5 @@
+<view class="container">
+  <text>我的页面</text>
+  <button bindtap='addclick'>baidu</button>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>

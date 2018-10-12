@@ -1,0 +1,3 @@
+<!--miniprogram/pages/dynamic/dynamic.wxml-->
+<text>miniprogram/pages/dynamic/dynamic.wxml</text>
+<tabbar tabbar="{{tabbar}}"></tabbar>

@@ -1,0 +1,29 @@
+/* miniprogram/pages/login/login.wxss */
+.title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center; 
+  background-color: #e6e3e3;
+}
+
+.logo-box {
+  height: 150rpx;
+  background-color: #f3f0f0;
+  overflow: hidden;
+}
+
+.logo-box .logo {
+  width: 82rpx;
+  height: 82rpx;
+  display: block;
+  margin: 30rpx auto;
+}
+
+.login_nav {
+  height: 200rpx;
+  line-height: 200rpx;
+}
+
+.navigator {
+  display: inline;   
+}
