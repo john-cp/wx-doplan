@@ -1,3 +1,111 @@
-<view class="page">
-  注册页
+<view class='title'><text class="goback" wx:if="{{activeStep == 1}}" bind:tap='goback'>上一步</text>注册</view>
+<view class="step">
+  <van-steps
+    steps="{{ steps }}"
+    active="{{ activeStep }}"
+  />
 </view>
+<view class="register_form" wx:if="{{activeStep == 0}}">
+  <van-cell-group>
+    <van-field
+      value="{{ phone }}"
+      required
+      clearable
+      label="手机号"
+      data-text="phone"
+      placeholder="请输入手机号"
+      bind:change="input_change"
+      bind:focus="inputFocus"
+      error-message="{{tips_phone}}"
+    />
+    <van-button class="verCode" type="primary" size="medium" bindtap='getVerCode'>获取</van-button>
+    <van-field
+      value="{{ verCode  }}"
+      required
+      clearable
+      label="验证码"
+      data-text="verCode"
+      placeholder="请输入验证码"
+      bind:change="input_change"
+      bind:focus="inputFocus"
+      error-message="{{tips_verCode}}"
+    />
+    <van-field
+      value="{{ relName }}"
+      required
+      clearable
+      label="真实姓名"
+      data-text="relName"
+      placeholder="请输入手机号"
+      bind:change="input_change"
+      bind:focus="inputFocus"
+      error-message="{{tips_relName}}"
+    />
+    <van-field
+      value="{{ password }}"
+      type="password"
+      label="密码"
+      data-text="password"
+      placeholder="请输入密码"
+      required
+      bind:change="input_change"
+      bind:focus="inputFocus"
+      error-message="{{tips_password}}"
+    />
+    <van-field
+      value="{{ password2 }}"
+      type="password"
+      label="确认密码"
+      data-text="password2"
+      placeholder="请再次输入密码"
+      required
+      bind:change="input_change"
+      bind:focus="inputFocus"
+      error-message="{{tips_password2}}"
+    />
+  </van-cell-group>
+</view>
+<view wx:if="{{activeStep == 1}}">
+  <van-tabs active="{{ active_tab }}" bind:change="tabChange">
+  <van-tab title="创建企业">
+    <van-cell-group>
+      <van-field
+        value="{{ company }}"
+        clearable
+        label="企业名称"
+        data-text="company"
+        placeholder="请输入企业名称"
+        bind:change="input_change"
+        bind:focus="inputFocus"
+        error-message="{{tips_company}}"
+      />
+      <van-field
+        value="{{industry[index]}}"
+        label="所属行业"
+        placeholder="请选择"
+        disabled
+      />
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{industry}}" class="industry">
+        <view class="picker">
+        </view>
+      </picker>
+    </van-cell-group>
+  </van-tab>
+  <van-tab title="加入企业">
+    <van-cell-group>
+      <van-field
+        value="{{ add }}"
+        clearable
+        label="企业邀请码"
+        data-text="add"
+        placeholder="请输入账号"
+        bind:change="input_change"
+        bind:focus="inputFocus"
+        error-message="{{tips_add}}"
+      />
+    </van-cell-group>
+  </van-tab>
+</van-tabs>
+</view>
+<button class="" type="primary" size="large" data-text="{{btn_text}}" bindtap='nextStep' style="background-color:#0079f3;margin-top:40rpx;">{{btn_text}}</button>
+

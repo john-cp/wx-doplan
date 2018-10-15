@@ -1,1 +1,42 @@
-/* miniprogram/pages/login/register.wxss */
+.title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center; 
+  background-color: #e6e3e3;
+}
+
+.goback {
+  color: white;
+  font-size: 28rpx;
+  float: left;
+}
+
+.step {
+  height: 120rpx;
+  padding: 10rpx 130rpx 0 130rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #e6e3e3;
+}
+
+.register_form {
+  height: auto;
+  border-bottom: 1px solid #e6e3e3;
+}
+
+.verCode .van-button--primary{
+  width:130rpx;
+  position:absolute;
+  z-index:99;
+  right:0;
+}
+
+.industry {
+  height: 88rpx;
+  width:100%;
+  position: absolute;
+  top: 174rpx;
+}
+
+.picker {
+  height: 88rpx;
+}

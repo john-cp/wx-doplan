@@ -1,1 +1,9 @@
-{}
+{
+  "usingComponents": {
+    "van-steps": "../dist/steps/index",
+    "van-field": "../dist/field/index",
+    "van-button": "../dist/button/index",
+    "van-tab": "../dist/tab/index",
+    "van-tabs": "../dist/tabs/index"
+  }
+}

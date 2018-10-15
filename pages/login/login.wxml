@@ -1,32 +1,46 @@
 <view class='title'>登录</view>
 <view class="logo-box"><image class="logo"  src='../../image/logo.png'></image></view>
-  
-<view class="weui-cell weui-cell_input">
-  <view class="weui-cell__hd">
-      <view class="weui-label">账号</view>
-  </view>
-  <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入账号"/>
-  </view>
-</view>
-<view class="weui-cell weui-cell_input">
-  <view class="weui-cell__hd">
-      <view class="weui-label">密码</view>
-  </view>
-  <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入密码"/>
-  </view>
+<view class="login_form">
+  <van-cell-group>
+    <van-field
+      value="{{ username }}"
+      required
+      clearable
+      label="用户名"
+      data-text="name"
+      placeholder="请输入用户名"
+      bind:change="username_change"
+      bind:focus="input"
+      error-message="{{tips_name}}"
+    />
+    <van-field
+      value="{{ password }}"
+      type="password"
+      label="密码"
+      data-text="pwd"
+      placeholder="请输入密码"
+      required
+      bind:change="password_change"
+      bind:focus="input"
+      error-message="{{tips_password}}"
+    />
+  </van-cell-group>
 </view> 
 
-<view class="section section_gap">
-  <view class="remember-pwd">记住密码</view>
-  <switch name="rememberpwd"/>
+<view class="rememberPwd">
+  <text style="font-size:28rpx;">记住密码</text>
+  <van-switch
+  size="22px"
+  checked="{{ checked }}"
+  bind:change="onChange"
+/>
 </view>
   
-  <view class="btn-area">
-    <button formType="submit" bindtap='loginTap'>登录</button>  
-  </view>
+<view class="btn-login">
+  <button size="large" bindtap='loginTap' style="background-color:#0079f3;">登录</button>  
+</view>
 <view class="login_nav">
   <navigator open-type="navigate" url="/pages/login/register" class="navigator">注册账号</navigator>
+  <text style="font-size:30rpx;">|</text>
   <navigator open-type="navigate" url="/pages/login/findpwd" class="navigator">忘记密码</navigator>
 </view>

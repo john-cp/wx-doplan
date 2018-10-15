@@ -19,11 +19,27 @@
   margin: 30rpx auto;
 }
 
+.rememberPwd {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 30rpx 5rpx 20rpx;
+  border: 1px solid #e6e3e3;
+}
+
+.rememberPwd, .btn-login {
+  margin-top:40rpx;
+}
+
 .login_nav {
-  height: 200rpx;
-  line-height: 200rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 180rpx;
 }
 
 .navigator {
   display: inline;   
+  color:#0079f3;
+  font-size: 32rpx;
 }
